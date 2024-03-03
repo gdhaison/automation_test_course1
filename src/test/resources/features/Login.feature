@@ -1,7 +1,6 @@
 @exampleFeature
 Feature: Login
 
-  @loadpage
+  @login_kiotviet
   Scenario: Login Kiotviet
-    Given the site "DuckDuckGo" is open
-    Then the searchbar is enable
+    Given the website "https://auto1.kiotviet.vn/man/#/login" is open

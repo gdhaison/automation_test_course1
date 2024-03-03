@@ -45,36 +45,18 @@ public class KiotVietLogin {
 
     }
 
-    @Given("the site {string} is open")
-    public void theSiteDuckDuckGoIsOpen(String site) {
-//        String url = "";
-
-//        switch (site.toLowerCase()){
-//            case "duckduckgo":
-//                url = "https://duckduckgo.com/";
-//                break;
-//            case "automation practise store":
-//                url = "http://automationpractice.com/";
-//                break;
-//            default:
-//                Assert.fail("Something is wrong. The website '" + site + "' you are trying to open in not recognised. ");
-//        }
+    @Given("the website {string} is open")
+    public void login(String site) {
 
         startDriver(site);
+
         Waits waits = new Waits(driver);
         LoginPage loginPage = new LoginPage(driver);
 
-//        switch (site.toLowerCase()){
-//            case "duckduckgo":
-//                Homepage homepage = new Homepage(driver);
-//                waits.waitForElement(homepage.logoHomepage);
-//                break;
-//            case "automation practise store":
-//                AutomationStore automationStore = new AutomationStore(driver);
-//                waits.waitForElement(automationStore.logoStore);
-//                break;
-//            default:
-//                System.out.println("Something is wrong. The website '" + site + "' you are trying to open in not recognised. ");
-//        }
+        loginPage.user_name.sendKeys("admin");
+        loginPage.password.sendKeys("123");
+        loginPage.login_btn.click();
+
+        /* waits.waitForElement(loginPage.logo); */
     }
 }

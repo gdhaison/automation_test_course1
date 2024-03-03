@@ -18,4 +18,7 @@ public class LoginPage {
 
     @FindBy(name = "quan-ly")
     public WebElement login_btn;
+
+    @FindBy(xpath = "//*[@title='KiotViet']")
+    public WebElement logo;
 }
