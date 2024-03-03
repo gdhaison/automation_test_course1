@@ -10,7 +10,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import pageobjects.Homepage;
+import pageobjects.LoginPage;
 import pageobjects.Searchresults;
 import pageobjects.AutomationStore;
 import utils.FileUtils;
@@ -45,5 +45,36 @@ public class KiotVietLogin {
 
     }
 
+    @Given("the site {string} is open")
+    public void theSiteDuckDuckGoIsOpen(String site) {
+//        String url = "";
 
+//        switch (site.toLowerCase()){
+//            case "duckduckgo":
+//                url = "https://duckduckgo.com/";
+//                break;
+//            case "automation practise store":
+//                url = "http://automationpractice.com/";
+//                break;
+//            default:
+//                Assert.fail("Something is wrong. The website '" + site + "' you are trying to open in not recognised. ");
+//        }
+
+        startDriver(site);
+        Waits waits = new Waits(driver);
+        LoginPage loginPage = new LoginPage(driver);
+
+//        switch (site.toLowerCase()){
+//            case "duckduckgo":
+//                Homepage homepage = new Homepage(driver);
+//                waits.waitForElement(homepage.logoHomepage);
+//                break;
+//            case "automation practise store":
+//                AutomationStore automationStore = new AutomationStore(driver);
+//                waits.waitForElement(automationStore.logoStore);
+//                break;
+//            default:
+//                System.out.println("Something is wrong. The website '" + site + "' you are trying to open in not recognised. ");
+//        }
+    }
 }
