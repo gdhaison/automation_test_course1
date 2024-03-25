@@ -26,7 +26,7 @@ public class StepDefinitions {
 
     public void startDriver(String url){
 
-        System.setProperty("webdriver.chrome.driver", new File("chromedriver").getPath());
+        String s = System.setProperty("webdriver.chrome.driver", new File("chromedriver.exe").getPath());
         driver = new ChromeDriver();
         driver.get(url);
         driver.manage().window().maximize();
@@ -41,7 +41,7 @@ public class StepDefinitions {
             fileUtils.addScreenshot(scenario, driver);
         }
 
-        driver.quit();
+   //     driver.quit();
 
     }
 
