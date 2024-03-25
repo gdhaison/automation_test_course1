@@ -33,17 +33,17 @@ public class StepDefinitions {
 
     }
 
-    @After
-    public void tearDown(Scenario scenario) throws IOException {
-
-        if(scenario.isFailed()){
-            FileUtils fileUtils = new FileUtils();
-            fileUtils.addScreenshot(scenario, driver);
-        }
-
-        driver.quit();
-
-    }
+//    @After
+//    public void tearDown(Scenario scenario) throws IOException {
+//
+//        if(scenario.isFailed()){
+//            FileUtils fileUtils = new FileUtils();
+//            fileUtils.addScreenshot(scenario, driver);
+//        }
+//
+//        driver.quit();
+//
+//    }
 
     @Given("the site {string} is open")
     public void theSiteDuckDuckGoIsOpen(String site) {
