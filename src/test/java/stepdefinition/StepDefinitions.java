@@ -34,15 +34,24 @@ public class StepDefinitions {
     }
 
     @After
+//    public void tearDown(Scenario scenario) throws IOException {
+//
+//        if(scenario.isFailed()){
+//            FileUtils fileUtils = new FileUtils();
+//            fileUtils.addScreenshot(scenario, driver);
+//        }
+//
+//        driver.quit();
+//
+//    }
     public void tearDown(Scenario scenario) throws IOException {
-
-        if(scenario.isFailed()){
-            FileUtils fileUtils = new FileUtils();
-            fileUtils.addScreenshot(scenario, driver);
+        if (driver != null) {
+            if (scenario.isFailed()) {
+                FileUtils fileUtils = new FileUtils();
+                fileUtils.addScreenshot(scenario, driver);
+            }
+            driver.quit();
         }
-
-        driver.quit();
-
     }
 
     @Given("the site {string} is open")
