@@ -17,7 +17,7 @@ public class BDDSteps {
     public void i_am_on_the_panda_page(){
         System.setProperty("webdriver.chrome.driver",new File("chromedriver.exe").getPath());
         driver = new ChromeDriver();
-        driver.get("https://automationpanda.com/");
+        driver.get("https://automationpanda.com/");   //đi tới trag webs
     }
     @When("I click BDD on the navigation bar")
     public void i_click_BDD_on_the_nav_bar(){
