@@ -12,6 +12,7 @@ public class TestUtils {
             char randomChar = allowedChars.charAt(randomIndex);
             randomString.append(randomChar);
         }
+
         return randomString.toString();
     }
     public static void main(String[] args) {

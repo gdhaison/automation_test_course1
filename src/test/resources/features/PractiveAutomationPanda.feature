@@ -8,4 +8,3 @@ Feature: login AutomationPanda
     And I enter email "<input_email>"
     And i click on follow button
     Then i should see a notification email confirm
-git

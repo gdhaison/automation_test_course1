@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepdefinition;
 
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
