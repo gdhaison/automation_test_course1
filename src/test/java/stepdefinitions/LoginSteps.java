@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import static org.junit.Assert.assertEquals;
 import java.io.File;
 
 public class LoginSteps {
@@ -42,7 +42,9 @@ public class LoginSteps {
     @Then("I should see a logout button")
     public void see_a_logout_button() {
         WebElement Logoutbutton = driver.findElement(By.xpath("//i[contains(@class,'icon-signout')]"));
-        boolean isDisplayed = Logoutbutton.isDisplayed();
+        boolean Display= Logoutbutton.isDisplayed();
+        assertEquals(Display,true);
 
     }
+
 }
