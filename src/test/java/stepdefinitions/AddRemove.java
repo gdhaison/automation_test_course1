@@ -19,13 +19,6 @@ public class AddRemove {
     private WebDriver driver;
     //Định nghĩa 1 hành động xảy ra trước khi chạy testcase
 
-    @Before
-    public void SetUp() {
-        System.setProperty("webdriver.chrome.driver", new File("chromedriver.exe").getPath());
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();   //bật to web
-
-    }
 
     @Given("I am on the add remove element page")
     public void im_on_the_add_remove_page() {
@@ -41,7 +34,7 @@ public class AddRemove {
     }
 
     @Then("{int} delete button should be display")
-    public void delete_button_should_be_display(int number_of_elements_expected) {
+    public void the_delete_button_should_be_display(int number_of_elements_expected) {
         //for (int i =0; i < number_of_elements; i++) {
         int number_of_element_actual = driver.findElements(By.className("added-manually")).size();
         Assert.assertEquals(number_of_elements_expected, number_of_element_actual);
@@ -66,10 +59,16 @@ public class AddRemove {
     }
 
 
-    @After
-    public void tearDown() {
-        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
-        driver.quit(); //đóng cửa sổ
-    }
+//    @After
+//    public void tearDown() {
+//        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+//        driver.quit(); //đóng cửa sổ
+//    }
 }
+//
+//    @After
+//    public void tearDown() {
+//        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+//        driver.quit(); //đóng cửa sổ
+//    }
 
