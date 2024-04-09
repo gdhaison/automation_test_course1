@@ -65,15 +65,15 @@ public class cart {
         AddtocartField.click();
     }
 
-    @Then("I verify product in the cart have {int} and {int} correct to product in step 3")
-    public void I_verify_product_and_price(int Name_expected, int Price_expected) {
-        WebElement Name_actual = driver.findElement(By.xpath("//td[@class='cart_description']"));
-        Name_actual.getText();
-        Assert.assertEquals(Name_expected,Name_actual);
-        WebElement Price_actual = driver.findElement(By.xpath("//td[@class='cart_price']"));
-        Price_actual.getText();
-        Assert.assertEquals(Price_expected,Price_actual);
+    @Then("I verify product in the cart have {string} and {string} correct to product in step 3")
+    public void I_verify_product_in_the_cart_have_correct_to_product_in_step_3(String Name, String Price) {
+        String Name_actual= driver.findElement(By.xpath("//td[@class='cart_description']")).getText();
+        boolean Name_actual_2 = Name_actual.contains(Name);
+        String Price_actual = driver.findElement(By.xpath("//td[@class='cart_price']")).getText();
+        Assert.assertEquals(Price,Price_actual);
     }
+
+
 
 
 }

@@ -20,14 +20,14 @@ Feature: Verify name and price product in the cart
       Then I am verify search product successful
       When I click on add in the cart
       And  I click on view cart go to the cart
-      Then I verify product in the cart have <Name> and <Price> correct to product in step 3
+      Then I verify product in the cart have "<Name>" and "<Price>" correct to product in step 3
 
 
 
       Examples:
           | Name             | Price     |
-          |Blue Top          | RS. 500   |
-          |Men Tshirt        | RS. 400   |
-          |Sleeveless Dress  | RS. 1000  |
+          |Blue Top          | Rs. 500   |
+          |Men Tshirt        | Rs. 400   |
+          |Sleeveless Dress  | Rs. 1000  |
 
 
