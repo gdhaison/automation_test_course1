@@ -23,13 +23,13 @@ import java.util.concurrent.TimeUnit;
 public class AddProducts {
     private WebDriver driver;
 
-    @Before
-    public void SetUp() {
-        System.setProperty("webdriver.chrome.driver", new File("chromedriver.exe").getPath());
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();   //bật to web
-
-    }
+//  @Before
+//    public void SetUp() {
+//        System.setProperty("webdriver.chrome.driver", new File("chromedriver.exe").getPath());
+//        driver = new ChromeDriver();
+//        driver.manage().window().maximize();   //bật to web
+//
+//    }
 
     @Given("I am on the add product page")
     public void im_on_the_add_product_page() {
