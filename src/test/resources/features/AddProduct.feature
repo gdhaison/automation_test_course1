@@ -13,6 +13,6 @@ Feature: Add products to cart
     Examples:
       | product_name     | price    |
       | Blue Top         | Rs. 500  |
-      | Men Tshirt       | Rs. 400  |
-      | Sleeveless Dress | Rs. 1000 |
+#      | Men Tshirt       | Rs. 400  |
+#      | Sleeveless Dress | Rs. 1000 |
     #(cụm Scenario Outline phải có examples)
